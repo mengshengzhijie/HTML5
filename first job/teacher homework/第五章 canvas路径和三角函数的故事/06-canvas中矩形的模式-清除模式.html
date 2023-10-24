@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="canvas2"></canvas>
+    <script>
+        //1.获取canvas元素
+        var canvas2 = document.getElementById('canvas2');
+        //2.获取上下文对象
+        var ctx = canvas2.getContext('2d');
+        // ctx.strokeRect(100,100,200,200)
+        // ctx.rect(100,100,200,200)
+        // ctx.stroke();
+        ctx.fillRect(100,100,200,200)
+        ctx.clearRect(200,200,200,200)
+    </script>
+</body>
+</html>

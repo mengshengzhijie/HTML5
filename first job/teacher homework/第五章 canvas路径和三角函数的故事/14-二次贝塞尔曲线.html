@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        width   设置画布的宽度
+        height  设置宽的高度
+        id      唯一标识
+     -->
+    <canvas width="600" height="400" id="c9"></canvas>
+    <!-- 
+        注释快捷键：ctrl+？
+        canvas本身并不具备绘图能力，需要通过js来绘制图形
+     -->
+     <script>
+        // 1.获取画布
+        var canvas=document.getElementById('c9');
+        //2.获取上下文对象（画笔）
+        var ctx=canvas.getContext('2d');
+        // quadraticCurveTo(cp1x, cp1y, x, y)
+        //绘制二次贝塞尔曲线，cp1x,cp1y 为一个控制点，x,y 为结束点。
+        ctx.moveTo(200,250);//设置起始点
+        ctx.quadraticCurveTo(150,200,220,180);
+        ctx.quadraticCurveTo(280,150,280,230);
+        ctx.quadraticCurveTo(250,300,220,270);
+        ctx.quadraticCurveTo(220,300,180,300);
+        ctx.quadraticCurveTo(200,250,200,250);
+        ctx.stroke();
+        // ctx.fill();
+     </script>
+</body>
+</html>

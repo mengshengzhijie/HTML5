@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="400" id="c7"></canvas>
+    <!-- canvas本身并不具备绘画的能力，需要使用js配合绘图 -->
+    <script>
+        //1.获取画布
+        var cnavas = document.querySelector('#c7');
+        //2.获取上下文对象（画笔）
+        var ctx = cnavas.getContext('2d');
+        //设置起始点
+        ctx.moveTo(200, 350);
+        ctx.bezierCurveTo(20,330,15,50,200,150);
+        ctx.bezierCurveTo(400,50,400,330,200,350);
+        // ctx.stroke();
+        ctx.fillStyle="red";
+        ctx.fill();
+       
+    </script>
+</body>
+
+</html>

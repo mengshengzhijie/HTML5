@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="400" height="400" id="c2"></canvas>
+    <script>
+        //1.获取canvas元素
+        var c2= document.querySelector('#c2');
+        //2.获取上下文对象（画笔）
+        var ctx = c2.getContext('2d');
+        //arc(x, y, radius, startAngle, endAngle, anticlockwise)
+        // x  y 就是圆心的坐标
+        //radius   圆的半径
+        //startAngle 开始的角度    endAngle结束角度   anticlockwise（可选，默认顺时针）
+        ctx.beginPath();//开始路径
+        ctx.arc(200,200,100,0,Math.PI*2)
+        // ctx.stroke();
+        ctx.fillStyle="rgb(144,102,100)";
+        ctx.fill();
+        ctx.closePath();//结束路径
+        // ctx.fill();
+        //嘴巴
+        ctx.beginPath();//开始路径
+        ctx.arc(200,200,60,0,Math.PI);
+        ctx.stroke();
+        ctx.closePath();//结束路径
+        //左眼
+        ctx.beginPath();//开始路径
+        ctx.arc(160,160,10,0,Math.PI*2);
+        ctx.stroke();
+        ctx.closePath();//结束路径
+        //右眼
+        ctx.beginPath();//开始路径
+        ctx.arc(240,160,10,0,Math.PI*2);
+        ctx.stroke();
+        ctx.closePath();//结束路径
+    </script>
+</body>
+</html>

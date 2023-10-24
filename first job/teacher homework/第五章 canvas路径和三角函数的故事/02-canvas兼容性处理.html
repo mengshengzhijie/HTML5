@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas>
+        <!-- 当浏览器不支持canvas元素，就会显示里面的文本内容 -->
+        你的浏览器不支持canvas元素
+    </canvas>
+    <script>
+        var canvas = document.querySelector('canvas')
+        //通过canvas元素的getContext对象，去判断浏览器是否支持canvas元素
+        //因为只有canvas元素才有getContext()方法
+        if(canvas.getContext){
+            //支持
+            console.log('支持')
+        }else{
+            //不支持
+            console.log('不支持')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c8"></canvas>
+    <script>
+        //1.获取canvas元素
+        var cnavas = document.getElementById('c8');
+        //2.获取上下文对象
+        var ctx=cnavas.getContext('2d');
+        //设置线条宽度
+        ctx.lineWidth='10';
+        //设置线条颜色
+        // ctx.strokeStyle='red';
+        //使用线性渐变填充线条颜色
+        //1)创建渐变对象
+        var d =ctx.createLinearGradient(300,200,500,200);
+        //2）设置渐变颜色
+        d.addColorStop(0,'green');
+        d.addColorStop(0.5,'blue');
+        d.addColorStop(1,'red');
+        //将渐变对象设置为线条颜色
+        ctx.strokeStyle=d;
+        ctx.moveTo(300,200);
+        ctx.lineTo(500,200);
+        ctx.stroke();
+        
+
+    </script>
+</body>
+</html>

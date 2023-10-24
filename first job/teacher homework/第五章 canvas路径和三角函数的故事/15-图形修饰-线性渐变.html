@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c8"></canvas>
+    <script>
+        //1.获取canvas元素
+        var cnavas = document.getElementById('c8');
+        //2.获取上下文对象
+        var ctx=cnavas.getContext('2d');
+        //createLinearGradient(x1,y1,x2,y2)
+        //x1和y1代表渐变开始的位置
+        //x2和y2代表渐变结束的位置
+        //创建线性渐变对象
+        var lgd=ctx.createLinearGradient(0,0,600,400);
+        //设置这个对象的渐变颜色设置
+        lgd.addColorStop(0,'red');
+        lgd.addColorStop(0.5,'orange');
+        lgd.addColorStop(1,'green');
+        //为画笔添加设置的渐变对象
+        ctx.fillStyle=lgd
+
+        // ctx.rect(0,0,600,400);
+        //爱心
+        ctx.moveTo(200, 350);
+        ctx.bezierCurveTo(20,330,15,50,200,150);
+        ctx.bezierCurveTo(400,50,400,330,200,350);
+        //渲染
+        ctx.fill();
+
+    </script>
+</body>
+</html>

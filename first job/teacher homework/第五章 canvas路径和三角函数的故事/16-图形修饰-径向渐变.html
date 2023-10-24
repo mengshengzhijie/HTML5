@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c8"></canvas>
+    <script>
+        //1.获取canvas元素
+        var cnavas = document.getElementById('c8');
+        //2.获取上下文对象
+        var ctx=cnavas.getContext('2d');
+
+        //创建渐变对象
+        //createRadialGradient(x0,y0,r0,x1,y1,r1)
+        //x0,y0代表渐变开始的圆的x坐标和y坐标
+        //开始圆的半径
+        //x1,y1代表结束圆的x坐标和y坐标
+        var d = ctx.createRadialGradient(100,100,210,300,300,210);
+        d.addColorStop(0,'red');
+        d.addColorStop(1,'green');
+        ctx.fillStyle=d;
+        ctx.rect(0,0,300,300);
+        ctx.stroke();
+        ctx.fill();
+        
+
+    </script>
+</body>
+</html>

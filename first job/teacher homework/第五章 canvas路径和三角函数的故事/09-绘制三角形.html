@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c2"></canvas>
+    <script>
+        //1.获取canvas元素
+        var c2= document.querySelector('#c2');
+        //2.获取上下文对象（画笔）
+        var ctx = c2.getContext('2d');
+        //设置画笔起点moveTo(x,y)
+        ctx.moveTo(100,100);
+        ctx.lineTo(150,200);
+        ctx.lineTo(200,100);
+        ctx.lineTo(100,100);
+        // ctx.stroke(); 
+        ctx.fillStyle='rgb(255,0,0)';
+        ctx.fill();
+
+    </script>
+</body>
+</html>

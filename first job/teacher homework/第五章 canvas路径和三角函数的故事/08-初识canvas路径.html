@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c2"></canvas>
+    <script>
+        //1.获取canvas元素
+        var c2= document.querySelector('#c2');
+        //2.获取上下文对象（画笔）
+        var ctx = c2.getContext('2d');
+        //设置画笔起点moveTo(x,y)
+        ctx.moveTo(100,100)
+        //lineTo(x, y)    绘制一条从当前位置到指定 x 以及 y 位置的直线。
+        ctx.lineTo(200,100)
+        //渲染
+        ctx.stroke();
+        ctx.lineTo(200,300)
+        ctx.stroke();
+        ctx.lineTo(100,300)
+        ctx.stroke();
+
+        ctx.moveTo(300,300)
+        ctx.lineTo(350,350)
+        ctx.stroke()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas1{
+            border: 1px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 在画布canvas中绘制两个颜色不同的正方形 -->
+    <canvas width="600" height="400" id="canvas1"></canvas>
+    <script>
+        //1.获取canvas元素
+        var canvas1 =document.getElementById('canvas1');
+        //2.获取上下文渲染对象，画笔   getContext对象具有很多绘制图形的方法
+        var ctx = canvas1.getContext('2d');
+        //3.绘制第一个图像
+        ctx.fillStyle='rgb(255,0,0)';
+        //fillRect(x轴的坐标，y轴的坐标，矩形宽度，矩形高度)
+        ctx.fillRect(100,100,200,200);
+        //alpha  透明度
+        ctx.fillStyle='rgba(0,0,255,0.5)';
+        ctx.fillRect(200,200,200,200)
+    </script>
+</body>
+</html>

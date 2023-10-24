@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        width   设置画布的宽度
+        height  设置宽的高度
+        id      唯一标识
+     -->
+    <canvas width="600" height="400" id="c9"></canvas>
+    <!-- 
+        注释快捷键：ctrl+？
+        canvas本身并不具备绘图能力，需要通过js来绘制图形
+     -->
+     <script>
+        // 1.获取画布
+        var canvas=document.getElementById('c9');
+        //2.获取上下文对象（画笔）
+        var ctx=canvas.getContext('2d');
+        //绘制线条
+        ctx.moveTo(100,100);//设置笔触的起始位置
+        ctx.lineTo(300,100);//设置线条终点位置
+        //渲染
+        ctx.stroke();
+
+        //绘制矩形
+        ctx.beginPath();
+        ctx.rect(300,200,100,100);
+        ctx.stroke();
+        ctx.closePath();
+        //圆
+        ctx.beginPath();
+        ctx.arc(100,300,50,0,Math.PI*2);
+        // ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+     </script>
+</body>
+</html>

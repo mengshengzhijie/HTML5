@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- autofocus 属性是一个布尔属性。autofocus 属性规定在页面加载时，域自动地获得焦点。 -->
+    账户：
+    <input type="text" autofocus>
+    <hr>
+    <!-- form 属性规定输入域所属的一个或多个表单。 -->
+    <!--位于form表单外的 input 字段引用了 HTML form (该 input 表单仍然属于form表单的一部分):-->
+    <form action="http://www.baidu.com" id="form1">
+        First name: 
+        <input type="text" name="fname"><br>
+        <input type="submit" value="提交">
+    </form>
+    
+    Last name: <input type="text" name="lname" form="form1">
+
+    <!-- 提交表单from1时，会把last  name后面的表单元素，也当作自己的表单元素来提交 -->
+</body>
+</html>

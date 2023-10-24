@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//1.获取页面（获取HTML元素）
+			var html  = document.documentElement;
+			
+			//2.取消html dragover默认事件
+			html.ondragover=function(e){
+				e.preventDefault();
+			}
+			
+			//3.将图像拖动到页面中放下之后
+			html.ondrop=function(e){
+				//取消默认事件
+				e.preventDefault();
+//				console.log(e.dataTransfer.files)
+//				e.dataTransfer.files[0] 可以得到上传图片的地址（url）
+				//创建一个图片节点
+				var img = new Image()
+				//设置图像的路径（url）
+				img.src=window.URL.createObjectURL(e.dataTransfer.files[0])
+				
+				//设置图片放置的位置（坐标）为鼠标的坐标
+				img.style.left=e.pageX + 'px';
+				img.style.top=e.pageY +'px';
+				
+				//将创建的图片节点添加到页面中
+				document.body.appendChild(img)
+			}
+		</script>
+	</body>
+</html>

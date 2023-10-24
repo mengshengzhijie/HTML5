@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c7"></canvas>
+    <script>
+        //1.获取画布
+        var c7=document.getElementById('c7');
+        //2.通过画布对象，得到渲染上下文对象
+        var ctx=c7.getContext('2d');
+        //arc(x, y, radius, startAngle, endAngle, anticlockwise)
+        //x,y代表圆心的坐标   radius代表圆的半径
+        //startAngle 开始的角度   endAngle 结束的角度   Math.PI---180度
+        // anticlockwise 绘制方向 可不写  默认值为false，是顺时针绘制的意思
+        ctx.arc(300,200,100,0,Math.PI*2);
+        //设置线条颜色
+        ctx.strokeStyle='pink';
+        //设置线条宽度
+        ctx.lineWidth='20';
+        ctx.stroke();
+        // ctx.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.container{
+				width: 1200px;
+				height: 300px;
+				background-color: darkgrey;
+				
+			}
+			.item{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				float: left;
+				margin-left: 5px;
+				/*设置盒子里面的文字对其方式*/
+				text-align: center;
+				line-height: 100px;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"></div>
+		<!--1.给需要拖动的元素设置dragable属性-->
+		<div class="item" draggable="true">1</div>
+		<div class="item" draggable="true">2</div>
+		<div class="item" draggable="true">3</div>
+		<div class="item" draggable="true">4</div>
+		<div class="item" draggable="true">5</div>
+		<div class="item" draggable="true">6</div>
+		<div class="item" draggable="true">7</div>
+		<div class="item" draggable="true">8</div>
+		<div class="item" draggable="true">9</div>
+		<div class="item" draggable="true">10</div>
+		
+		<script type="text/javascript">
+			//2.获取需要操作的元素
+			var container=document.querySelector('.container');
+			//获取所有类名为item的元素
+			var items=document.querySelectorAll('.item')
+//			console.log(items)
+			//3.遍历每一个item元素
+			for(var i=0;i<items.length;i++){
+//				items[i]  表示任意一个元素
+				//给每一个item元素设置id值
+				items[i].id='a'+i;
+				
+				//4.当开始拖拽的时候，存储拖动元素的id值
+				items[i].ondragstart=function(e){
+//					存储拖动元素的id值
+					e.dataTransfer.setData('id',this.id);
+				}
+				
+				//5.阻止目标元素dangover默认事件
+				container.ondragover=function(e){
+					e.preventDefault();
+				}
+				
+				//6.拖拽结束之后将拖动的元素添加为container的子元素
+				container.ondrop=function(e){
+					//得到拖动元素的id
+//					console.log(e.dataTransfer.getData('id'))
+					var id = e.dataTransfer.getData('id')
+					//再通过id得到该元素
+					var el = document.getElementById(id)
+//					console.log(el)
+					//将得到的元素添加为container的子级
+					this.appendChild(el)
+				}
+			}
+		</script>
+	</body>
+</html>

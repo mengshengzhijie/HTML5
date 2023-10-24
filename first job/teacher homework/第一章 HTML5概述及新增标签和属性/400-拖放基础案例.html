@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box5{
+				width: 200px;
+				height: 200px;
+				background-color: purple;
+			}
+			.box6{
+				width: 400px;
+				height: 400px;
+				background-color: sienna;
+			}
+		</style>
+	</head>
+	<body>
+		<!--1.给需要拖动的元素设置dragable属性-->
+		<div class="box5" draggable="true"></div>
+		<div class="box6"></div>
+		
+		<script type="text/javascript">
+			//2.获取需要操作的元素
+			var box5=document.querySelector('.box5');
+			var box6=document.querySelector('.box6');
+			
+			//3.阻止目标元素（放元素）dragover默认事件
+			box6.ondragover=function(e){
+				
+				e.preventDefault();//阻止默认事件
+			}
+			
+			//4.拖拽结束之后，要做什么
+			box6.ondrop=function(){
+				//将拖动中的box5，添加到box6中（将其设置为box6的子级元素）
+				this.appendChild(box5);
+			}
+		</script>
+	</body>
+</html>

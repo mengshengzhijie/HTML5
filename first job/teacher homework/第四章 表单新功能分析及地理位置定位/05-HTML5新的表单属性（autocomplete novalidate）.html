@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			使用这个属性，必须具备以下两个条件：
+
+				- autocomplete首先必须有提交按钮
+				- 使用这个属性的表单或表单元素必须给名字（即给name属性）
+		-->
+		<form action="" autocomplete="off">
+			用户名：<input type="text" name="username" />
+			<br />
+			邮箱：<input type="email" name="ee" />
+			<input type="submit">
+		</form>
+		<!-- 
+			novalidate 是一个布尔（true 或 false）属性。
+
+			novalidate 属性是 HTML 表单元素的一个布尔属性，用于设置浏览器不对表单进行验证。
+
+			当该属性被添加到 <form> 元素上时，浏览器将不会执行默认的表单验证，不会检查输入字段是否符合指定的验证规则。
+
+			使用 novalidate 属性可以让开发者完全控制表单验证的逻辑，可以通过 JavaScript 或其他方式来自定义表单验证的行为。
+					-->
+		<hr>
+		<form action="" novalidate>
+			邮箱：
+			<input type="email" name="email">
+			<br>
+			网站：
+			<input type="url" name="page">
+			<br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

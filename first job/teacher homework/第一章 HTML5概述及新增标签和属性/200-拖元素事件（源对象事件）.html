@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box2" draggable="true"></div>
+		<script type="text/javascript">
+			//1.获取元素
+			var box2=document.querySelector('.box2');
+//			console.log(box2)
+			//2.绑定事件
+			//dragstart   当一个元素开始被拖拽的时候触发
+			box2.ondragstart=function(){
+				console.log("开始拖拽");
+			}
+			
+			//drag这个事件在拖拽源触发(当还在拖动，未松开鼠标时出发)
+			box2.ondrag=function(){
+				console.log("正在拖拽")
+			}
+			
+			//拖拽源在拖拽操作结束dragend事件对象，不管操作成功与否
+			box2.ondragend=function(){
+				console.log("拖拽结束")
+			}
+		</script>
+	</body>
+</html>

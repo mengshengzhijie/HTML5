@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .item{
+            margin: 2px;
+            padding: 2px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="item" draggable="true">我喜欢你</li>
+        <li class="item" draggable="true">爱</li>
+        <li class="item" draggable="true">如愿</li>
+        <li class="item" draggable="true">会吗</li>
+        <li class="item" draggable="true">经济舱</li>
+        <li class="item" draggable="true">手心的蔷薇</li>
+    </ul>
+    <script>
+        var items=document.querySelectorAll('.item')
+        for(var i=0;i<items.length;i++){
+            //设置id
+            items[i].id='li'+i 
+
+            //开始拖的时候，存储拖动元素的id
+            items[i].ondragstart=function(e){
+                e.dataTransfer.setData('id',this.id)
+                
+            }
+            //阻止元素默认事件
+            items[i].ondragover=function(e){
+                e.preventDefault();
+            }
+
+            //放事件
+            items[i].ondrop=function(e){
+                console.log(this)
+                console.log(e.dataTransfer.getData('id'))
+                var id = e.dataTransfer.getData('id')
+                var li =document.getElementById(id)
+                var ul=this.parentNode
+                // console.log(ul)
+                //通过insertBefore，排序
+                ul.insertBefore(li,this)
+                this.style.borderTop='none'
+            }
+
+            //当放到谁上面的时候，设置个效果
+            items[i].ondragenter=function(){
+                this.style.borderTop="2px solid red"
+            }
+            items[i].ondragleave=function(){
+                this.style.borderTop='none'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c2"></canvas>
+    <!-- canvas自己本身并不具备绘图的能力，需要通过脚本（js）来绘制图形 -->
+    <script>
+        //1.获取页面中的canvas元素(元素对象)
+        var c2 = document.getElementById('c2');
+        //2.通过元素对象，得到上下文渲染对象（画笔）
+        var ctx = c2.getContext('2d');
+        //设置上下文对象的颜色
+        ctx.fillStyle='rgb(255,0,255)';
+        //3.绘制矩形     fill--填充、使填满     rect----矩形
+        // fillRect(x坐标，y坐标，矩形宽度，矩形高度)
+        ctx.fillRect(100,100,200,200);
+        //alpha  透明度  取值范围0-1之间
+        ctx.fillStyle='rgba(0,0,255,0.5)';
+        ctx.fillRect(200,200,200,200);
+    </script>
+</body>
+</html>

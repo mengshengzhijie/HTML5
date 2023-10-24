@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        pattern 属性描述了一个正则表达式用于验证 <input> 元素的值。
+
+**注意:**pattern 属性适用于以下类型的 <input> 标签: text, search, url, tel, email, 和 password。
+
+**提示：** 是用来全局 title属性来描述模式。
+     -->
+
+     <form action="http://www.baidu.com">
+        账户：
+        <input type="text" name="uname">
+        <br>
+        Country code:
+        <!-- 
+            [A-Za-z]{3}:代表任意字母，只能出现3次
+         -->
+         <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+         <br>
+         <input type="submit">
+     </form>
+</body>
+</html>

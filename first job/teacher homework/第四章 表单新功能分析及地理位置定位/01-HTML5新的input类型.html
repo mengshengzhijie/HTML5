@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--用户名：<input type="text" />
+		<br />
+		密码：<input type="password" />
+		<br />
+		性别:<input type="radio" />男<input type="radio" />女
+		<br />
+		选择你的爱好：<input type="checkbox" />游泳<input type="checkbox" />跑步-->
+		<h1>HTML5新的input类型</h1>
+		<hr />
+		<form action="" >
+			选择你喜欢的颜色: <input type="color" name="favcolor">
+			<br />
+			入学日期：<input type="date" name="data1" />
+			<br />
+			生日：<input type="datetime" name="birthday" />
+			<br />
+			生日 (日期和时间): <input type="datetime-local" name="bdaytime">
+			<br />
+			<!--email 类型用于应该包含 e-mail 地址的输入域(在提交表单时，会自动验证 email 域的值是否合法有效)。-->
+			邮箱：<input type="email" name="e" />
+			<br />
+			<!--month 类型允许你选择一个月份。-->
+			生日 (月和年): <input type="month" name="bdaymonth">
+			<br />
+			<!--step 步长-->
+			数量（1-5之间）：<input type="number" name="num" min="0" max="100" step="4" />
+			<br />
+			<!--range 类型用于应该包含一定范围内数字值的输入域。-->
+			<input type="range" min="1" max="10" step="1" value="8" />
+			<br />
+			<!--search 类型用于搜索域，比如站点搜索或 Google 搜索。-->
+			Search Google: <input type="search" name="googlesearch">
+			
+			<br />
+			电话号码：<input type="tel" name="usertel" />
+			<br />
+			选择时间: <input type="time" name="usr_time">
+			<br />
+			<!--url 类型用于应该包含 URL 地址的输入域。(在提交表单时，会自动验证 url 域的值)-->
+			添加你的网站：<input type="url" name="homepage" />
+			<br />
+			<!--week 类型允许你选择周和年。-->
+			选择周: <input type="week" name="week_year">
+			<br />
+			<input type="submit" />
+		</form>
+	</body>
+</html>

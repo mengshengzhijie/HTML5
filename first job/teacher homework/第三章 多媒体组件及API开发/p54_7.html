@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <audio src="media/G.E.M.邓紫棋-桃花诺.mp3" controls></audio>
+<br>
+<button>播放</button>
+<button>上一曲</button>
+<button>下一曲</button>
+<button>暂停</button>
+    </div>
+    <script>
+        var btns = document.querySelectorAll('button')
+        var st = document.querySelectorAll('audio')
+       btns[0].onclick=function(){
+        console.log(st[0]);
+        st.play();
+    }
+    btns[1].onclick=function(){
+        
+    }
+    </script>
+</body>
+</html>

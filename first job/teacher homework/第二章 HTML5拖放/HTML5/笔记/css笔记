@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="./yanshi.css">     引用方式
+color: red;
+font-size: 35px;
+
+{margin 0;
+padding:0;}

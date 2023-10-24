@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		/*清除元素默认的样式*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.header-t {
+			background-color: black;
+		}
+
+		.header {
+			width: 100%;
+			height: 50px;
+			color: white;
+			/*的说法是*/
+		}
+
+		.header .main {
+			width: 70%;
+			height: 50px;
+			/*background-color: gray;*/
+			margin: 0 auto;
+		}
+
+		.header .header-left {
+			width: 30%;
+			height: 50px;
+			float: left;
+			/*background-color:red ;*/
+		}
+
+		.header .header-right {
+			width: 70%;
+			height: 50px;
+			float: left;
+			/*background-color:green ;*/
+		}
+
+		.header-right ul {
+			list-style: none;
+		}
+
+		.header-right ul li {
+			width: 16%;
+			height: 50px;
+			/*background-color:orange ;*/
+			float: left;
+			margin-left: 3px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+		.header-right ul li:hover {
+			background-color: orangered;
+			cursor: pointer;
+		}
+		.div{
+			float: right;;
+
+			border-radius: 20px;
+		}
+		.text{
+			background-color: rgb(154, 88, 88);
+			text-align: center;
+			
+			
+		}
+		.tab{
+			border-spacing: 10px 0px;
+			padding: 15px;
+		}
+		.img-l{
+			width: 80px;
+			height: 50px;
+		}
+		.img-r{
+			width: 100%;
+			display:flex;
+			justify-content:space-between;
+			/*align-items:flex-end;*/
+		}
+		.png-高{
+			width: 500px;
+			height: 200px;
+			background-image: url(./img/高.jpg);
+			background-size: cover;
+		}
+		.png-大{
+			height: 630px;
+			width: 1000px;
+			background-image: url(./img/天狗十月.jpg);
+			background-size: cover;
+			float: right;
+		}
+		.bigg{
+			width: 500px;
+			height: 200px;
+			background-image: url(./img/big.jpg);
+			float: left;
+			background-size: cover;
+			transform:translateY(-207%);
+	-ms-transform:translateY(-207%);
+	-webkit-transform:translateY(-207%);
+
+		}
+		.big6{
+			width: 500px;
+			height: 200px;
+			background-image: url(./img/big\ \(6\).jpg);
+			background-size: cover;
+			transform:translateY(-100%);
+	-ms-transform:translateY(-100%);
+	-webkit-transform:translateY(-100%);
+		}
+		.divla{
+			transform:translateY(-150%);
+	-ms-transform:translateY(-150%);
+	-webkit-transform:translateY(-150%);
+		}
+		.p1{
+			height: 15;
+			width: 40;
+	background-image: url(./img/晚霞.jpg);
+		}
+	</style>
+</head>
+
+<body background="./img/欢迎.jpg">
+	<header class="header header-t">
+		<div class="main">
+			<div class="header-left">
+				<h1>Photo Art</h1>
+			</div>
+			<div class="header-right">
+				<ul>
+					<li>Home</li>
+					<li>About</li>
+					<li>Prlyacy</li>
+					<li>Gollecy</li>
+					<li>Contact</li>
+					<li>Sitemap</li>
+				</ul>
+			</div>
+		</div>
+		<div class="div">
+			<table>
+				<table class="tab">
+					</tr>
+					<tr class="text">
+						<td>标题1</td>
+						<td>标题2</td>
+						<td>标题3</td>
+						<td>标题4</td>
+						<td>标题5</td>
+					</tr>
+					<tr class="lou">
+						<td>--------------</td>
+						<td>--------------</td>
+						<td>--------------</td>
+						<td>--------------</td>
+						<td>--------------</td>
+						<td>--------------</td>
+						<td>--------------</td>
+					</tr> 
+				</table>
+			</table>
+		</div>
+		<div class="img-l">
+			</div>
+		<div class="img-r" flex:1;>
+			<div class="png-高"></div>
+			<div class="png-大"></div>
+		</div>
+		<div class="bigg"></div>
+		<div class="big6"></div>
+		<div class="divla">
+		<div class="p1">
+			<h3>
+				我们的客户
+			</h3>
+			<ui>
+				<li>文本1</li>
+				<li>文本2</li>
+				<li>文本3</li>
+				<li>文本4</li>
+			</ui>
+		</div>
+		<div class="p1"></div>
+		<div class="p2"></div>
+		<div class="p3"></div>
+		</div>
+</body>
+
+</html>

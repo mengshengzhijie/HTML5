@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        required 属性是一个 boolean 属性.required 属性规定必须在提交之前填写输入域（不能为空）。
+
+            **注意:**required 属性适用于以下类型的 <input> 
+            标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 
+            以及 file。
+     -->
+     <form action="http://www.baidu.com">
+        账号：
+        <input type="text" name="name" required>
+        <br>
+        电话：
+        <input type="tel" name="tel" required>
+        <br>
+        邮箱：
+        <input type="email" name="email" required>
+        <br>
+        网站：
+        <input type="url" name="url" required>
+
+        <br>
+        <input type="submit">
+     </form>
+</body>
+</html>

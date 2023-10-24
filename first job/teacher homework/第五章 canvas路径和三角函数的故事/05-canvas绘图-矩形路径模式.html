@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c4"></canvas>
+    <script>
+        //1.获取canvas元素对象
+        var c4 =document.getElementById('c4');
+        //2.再通过元素对象，获取上下文渲染对象（画笔）
+        var ctx = c4.getContext('2d');
+        //3.绘制路径矩形 strokeRect(x轴坐标，y轴坐标，矩形宽度，矩形高度)
+        // ctx.strokeRect(100,100,200,200)
+        //分开写
+        //先绘制矩形
+        ctx.rect(100,100,200,200);
+        //使用路径（或线条）渲染矩形（就是将矩形以线条的形式展现出来）
+        ctx.stroke();
+    </script>
+</body>
+</html>

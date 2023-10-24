@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: brown;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .item{
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+            background-color: gray;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+        }
+        .a{
+            margin-left: 10%;
+        }
+        .item:hover{
+            cursor: pointer;
+            background-color: orangered;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        <label for="">正在播放：</label>
+        <span id="span1">G.E.M.邓紫棋-桃花诺.mp3</span>
+        <br>
+        <audio src="./media/G.E.M.邓紫棋-桃花诺.mp3" controls></audio>
+        <br>
+        <span class="item a">播放</span>
+        <span class="item">上一首</span>
+        <span class="item">下一首</span>
+        <span class="item">暂停</span>
+        <span class="item">播放模式</span>
+    </div>
+    <script>
+        //1.定义数组，存放音频数据
+        var arr = [
+                "./media/G.E.M.邓紫棋-桃花诺.mp3",
+                "./media/周杰伦-兰亭序.mp3",
+                "./media/周杰伦-七里香.mp3"
+                ];
+        //2.获取元素
+        var items =document.querySelectorAll('.item');
+        var audio=document.querySelector('audio');
+        var span1 =document.querySelector('#span1')
+        //3.点击上一首
+        var index=0;
+        items[1].onclick=function(){
+            //直接判断下标
+            if(index==0){
+                index=2;
+            }else{
+                index--;
+            }
+            //设置audio对象的src属性
+            audio.src=arr[index]
+            //得到歌曲名称
+            // console.log(arr[index].substr(8))
+            //将得到的歌曲名称，写入soan1里面
+            span1.innerHTML=arr[index].substr(8)
+        }
+    </script>
+</body>
+</html>

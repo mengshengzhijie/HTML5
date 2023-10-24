@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formmethod formnovalidate formtarget</title>
+</head>
+<body>
+    <!-- 
+        1.formmethod
+            formmethod 属性定义了表单提交的方式。formmethod 属性覆盖了 <form> 元素的 method 属性。
+
+            **注意:** 该属性可以与 type="submit" 和 type="image" 配合使用。
+     -->
+     <form action="http://www.baidu.com" method="get">
+            name:<input type="text" name="username">
+            <br>
+            <input type="submit" value="默认提交方式提交">
+            <input type="submit" value="修改为post方式提交" formmethod="post">
+     </form>
+
+     <hr>
+     <!-- 
+        2.formnovalidate
+            novalidate 属性是一个 boolean 属性
+            novalidate属性描述了 <input> 元素在表单提交时无需被验证。
+            formnovalidate 属性会覆盖 <form> 元素的novalidate属性.
+
+        **注意:** formnovalidate 属性与 **type="submit"** 一起使用
+      -->
+      <!--两个提交按钮的表单(使用与不适用验证 )-->
+        <form action="http://www.baidu.com">
+            E-mail: <input type="email" name="userid">
+            <br>
+            <input type="submit" value="提交"><br>
+            <input type="submit" formnovalidate value="不验证提交">
+        </form>
+    
+
+    <hr>
+    <!-- 
+        3.formtarget
+            formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。
+            formtarget 属性覆盖 <form>元素的target属性.
+
+**注意:** formtarget 属性与 **type="submit"** 和 **type="image"** 配合使用。
+     -->
+     <form action="http://www.baidu.com">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        <input type="submit" value="正常提交">
+        <input type="submit" formtarget="_blank" value="提交到一个新的页面上">
+      </form>
+</body>
+</html>

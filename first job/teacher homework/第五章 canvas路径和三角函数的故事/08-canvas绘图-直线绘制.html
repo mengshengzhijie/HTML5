@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid orangered;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c6"></canvas>
+    <script>
+        //1.获取画布
+        var c6 = document.getElementById('c6');
+        //2.通过画布对象，获取上下文渲染对象
+        var ctx =c6.getContext('2d');
+        //moveTo(x,y):设置笔触的初始位置（或者移动笔触位置）
+        //lineTo(x,y):设置笔触的终点位置
+        ctx.moveTo(100,100);
+        ctx.lineTo(300,100);
+        //渲染线条(将绘制的线条呈现出来)
+        ctx.stroke();
+
+        ctx.moveTo(100,200);
+        ctx.lineTo(300,200);
+        ctx.stroke();
+
+        ctx.moveTo(100,300);
+        ctx.lineTo(300,300);
+        ctx.stroke();
+    </script>
+</body>
+</html>

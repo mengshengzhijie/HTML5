@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid orangered;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400" id="c5"></canvas>
+    <script>
+        //1.获取canvas元素对象(获取画布)
+        var c5 =document.getElementById('c5');
+        //2.通过元素对象获取上下文渲染对象（通过画布获得在当前画布绘画的画笔）
+        var ctx=c5.getContext('2d');
+        //填充矩形
+        ctx.fillRect(100,100,200,200);
+        //清除矩形
+        ctx.clearRect(150,150,100,100);
+        //路径矩形
+        ctx.strokeRect(160,160,80,80);
+    </script>
+</body>
+</html>

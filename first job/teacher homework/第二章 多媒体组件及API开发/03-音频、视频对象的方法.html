@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			video{
+				width:600px ;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn1">播放</button>
+		<button id="btn2">暂停</button>
+		<br />
+		<video src="media/毕业季 _ 经典怀旧歌曲合集 — 《明日将告别校园》.mp4" controls></video>
+		<script type="text/javascript">
+			/*
+			 * 
+			 * 	 play():开始播放视频
+			 *	 pause()：暂停已经播放的视频
+			 */
+			//1.获取video对象
+			var video =document.querySelector('video');
+			//2.获取按钮对象
+			var btn1 = document.querySelector('#btn1');
+			var btn2 = document.querySelector('#btn2');
+			//3.播放按钮点击事件（点击按钮触发）
+			btn1.onclick=function(){
+				video.play();
+			}
+			//4.暂停按钮点击事件（点击按钮出发）
+			btn2.onclick=function(){
+				video.pause();
+			}
+		</script>
+	</body>
+</html>

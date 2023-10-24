@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: #140b0b;
+            /*背景(填充)颜色*/
+        }
+
+        .bax {
+            width: 400px;
+            height: 400px;
+            background-image: url(mother.jpg);
+            /*添加图片*/
+            background-repeat: repeat-x;
+            /*如果框过大，或重复 repeat-x为x轴不重复。同理y也一样no-repeat直接不重复*/
+       background-size: 1400px 1400px;/*图片设置如果不设置则默认还可以用%*/
+        background-size: cover;/*保持图片不变形最大充满容器*/
+
+
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            background-image:url(mother.jpg);
+            background-repeat: no-repeat;
+            background-position: left center;/*看图片的那个部分，理解为放大*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="bax">
+
+    </div>
+    <div class="box"></div>
+</body>
+
+</html>

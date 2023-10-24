@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			video{
+				width: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--第一种写法-->
+		<video src="media/《My Heart Will Go On》.mp4" controls preload="none"></video>
+		<!--
+			第二种写法
+		-->
+		<video controls poster="img/1.png">
+			<source src="media/G.E.M.邓紫棋 - 光年之外MV.mp4"></source>
+			<source src="media/G.E.M.邓紫棋 - 光年之外MV.ogg"></source>
+			你的浏览器不支持video元素
+		</video>
+		<hr />
+		<h2>video元素的属性</h2>
+		<!--
+			autoplay   如果出现该属性，则视频在就绪后马上播放。
+			 preload
+			 	auto    metadata none如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。
+			 poster     规定视频正在下载时显示的图像，直到用户点击播放按钮。(视频封面)
+		--> 
+		<video src="media/小电影.mp4" controls autoplay muted preload="none" poster="img/1.png"></video>
+	</body>
+</html>

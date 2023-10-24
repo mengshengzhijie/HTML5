@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        video{
+				width:600px ;
+			}
+            
+    </style>
+</head>
+<body>
+    <div><button id="btn1">播放/暂停</button>
+    <button id="btn2">放大</button>
+    <button id="btn2">缩小</button>
+    <button id="btn2">普通</button>
+    <br>
+    <video src="./media/G.E.M.邓紫棋 - 光年之外MV.mp4"controls id="video1"></video>
+</div>
+<script>
+    var button = document.getElementById("butten");
+    function playPause() {
+        if(myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+</script>
+</body>
+</html>

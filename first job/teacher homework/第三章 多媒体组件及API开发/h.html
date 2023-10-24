@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf8">
+<head>
+    <title>html5 video播放/暂停开关</title>
+</head>
+<body>
+    <div style="text-align:center">
+        <button onclick="playPause()">播放/暂停</button>
+        <video id="video1" width="420">
+            <source src="./media/G.E.M.邓紫棋 - 光年之外MV.mp4 type=">
+        </video>
+    </div>
+ 
+<script type="text/javascript">
+    var myVideo = document.getElementById("video1");
+    function playPause() {
+        if(myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+</script>
+</body>
+</html>

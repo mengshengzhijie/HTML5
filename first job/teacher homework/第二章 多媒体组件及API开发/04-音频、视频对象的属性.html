@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			video{
+				width:600px ;
+			}
+		</style>
+	</head>
+	<body>
+		<button>确定</button>
+		<video src="media/G.E.M.邓紫棋 - 光年之外MV.mp4" controls></video>
+		<script type="text/javascript">
+			//video对象的paused属性
+			//paused属性 可以返回video对象是否被播放，如果视频、音频处于暂停状态，返回true，否则false
+			var video = document.querySelector('video');
+			var btn =document.querySelector('button');
+			btn.onclick=function(){
+				//输出paused属性的值
+				console.log(video.paused);
+			}
+		</script>
+	</body>
+</html>

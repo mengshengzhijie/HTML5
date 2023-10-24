@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<!--第一种写法-->
+		<audio src="./media/周杰伦-晴天.mp3" controls="controls"></audio>
+		<!--第二种写法-->
+		<hr />
+		<audio controls="controls">
+			<source src="media/周杰伦-七里香.mp3"></source>
+			<source src="media/周杰伦-七里香.ogg"></source>
+			你的浏览器不支持audio元素
+		</audio>
+		<hr />
+		<h2>audio元素的属性</h2>
+		<!--
+			autoplay   如果出现该属性，则音频在就绪后马上播放。(只有你的浏览器对当前网站的媒体查询度高，打开之后，才会自动播放)
+			muted	     如果出现该属性，则音频输出为静音。
+			loop       如果出现该属性，则每当音频结束时重新开始播放。
+			preload
+						auto(根据浏览需要是否进行预加载) metadata（进行预加载） none（不进行预加载）
+						规定当网页加载时，音频是否默认被加载以及如何被加载。
+		-->
+		<audio src="media/周杰伦-兰亭序.mp3" controls autoplay muted loop preload="none"></audio>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c3"></canvas>
+    <script>
+        //1.获取画布
+        var canvas = document.getElementById('c3');
+        //2.获取上下文对象
+        var ctx = canvas.getContext('2d');
+        var a = 0;
+        function move(){
+            //每次绘制图形之前，清空画布内容
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            //判断a的值，如果大于画布的宽度，则从0开始
+            if(a>canvas.width){
+                a=0;
+            }
+            ctx.fillRect(a+=1,100,200,200);//a+=1 等价于a = a+1
+            requestAnimationFrame(move);
+        }
+        //调用函数
+        requestAnimationFrame(move);
+    </script>
+</body>
+</html>

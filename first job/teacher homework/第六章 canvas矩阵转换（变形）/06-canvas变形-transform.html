@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c3"></canvas>
+    <script>
+        //1.获取画布
+        var canvas = document.getElementById('c3');
+        //2.获取上下文对象
+        var ctx = canvas.getContext('2d');
+        //transform(a, b, c, d, e, f)
+        /*
+            - a       水平方向的缩放
+            - b      竖直方向的倾斜偏移
+            - c      水平方向的倾斜偏移
+            - d      竖直方向的缩放
+            - e     水平方向的移动
+            - f      竖直方向的移动
+            transform(1,0,0,1,0,0)  默认值
+        */
+        // ctx.transform(1,0,0,1,0,0);
+        // ctx.transform(1,0.3,0,1,0,0);
+        // ctx.transform(1,0,0.5,1,0,0);
+        // ctx.transform(1,0,0,0.5,0,0);
+        ctx.transform(1,0,0,1,50,50);
+        //绘制矩形
+        ctx.fillRect(300,200,200,200);
+    </script>
+</body>
+</html>

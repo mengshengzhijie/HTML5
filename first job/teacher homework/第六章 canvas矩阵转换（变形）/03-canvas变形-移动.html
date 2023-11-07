@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c3"></canvas>
+    <script>
+        //1.获取画布
+        var canvas = document.getElementById('c3');
+        //2.获取上下文对象
+        var ctx = canvas.getContext('2d');
+
+        //translate(x,y)用于移动画布远点到指定的位置
+        ctx.translate(100,100);//- 发生位移后，相当于把画布的 0,0 坐标 更换到新的 x,y 的位置，所有绘制的新元素都被影响。
+        //绘制矩形
+        ctx.fillRect(0,0,100,100);
+    </script>
+</body>
+</html>

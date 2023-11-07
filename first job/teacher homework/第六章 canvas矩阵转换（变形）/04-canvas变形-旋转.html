@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c3"></canvas>
+    <script>
+        //1.获取画布
+        var canvas = document.getElementById('c3');
+        //2.获取上下文对象
+        var ctx = canvas.getContext('2d');
+        //先将画布的原点设置为画布的正中心
+        ctx.translate(400,300);
+        //context.rotate(angle)用于以原点为中心旋转 canvas。   degrees*Math.PI/180 
+        ctx.rotate(100*Math.PI/180);
+        //绘制矩形
+        ctx.fillRect(-100,-100,200,200);
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c1"></canvas>
+    <script>
+        //1.获取canvas元素（获取画布）
+        var canvas = document.getElementById('c1');
+        //2.通过canvas元素，得到当前画布上的上下文对象（画笔）
+        var ctx = canvas.getContext('2d');
+        ctx.fillRect(0,0,100,100);//绘制矩形
+        ctx.arc(400,300,50,0,Math.PI*2);
+        ctx.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            /* border: 1px solid orangered; */
+            /* 设置画布的背景颜色 */
+            background-color: rgb(36, 35, 35);
+            /* 设置画布为块元素 */
+            display: block;
+            /* 设置画布的外边距 */
+            margin: 0 auto;
+            /* color: rgb(214, 213, 203); */
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="600" id="c9"></canvas>
+    <script>
+        //1.获取画布
+        var canvas = document.getElementById('c9');
+        //2.获取上下文对象（画笔）
+        var ctx = canvas.getContext('2d');
+
+        //定义地球旋转角度的变量
+        var a = 0;
+        //定义月球旋转角度的变量
+        var b = 0;
+        function loop(){
+
+            //每次绘制图形之前，清空画布内容
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            ctx.save();//保存状态信息
+            //绘制太阳
+            ctx.beginPath();//开始路径
+            //设置画笔的填充颜色
+            ctx.fillStyle = 'rgb(233, 202, 27)';
+            //设置画笔阴影颜色
+            ctx.shadowColor = 'rgb(233, 202, 27)';
+            //设置阴影模糊距离（模糊半径）
+            ctx.shadowBlur = 10;
+            ctx.arc(400,300,100,0,Math.PI*2);
+            ctx.fill();//渲染图像（加了这一步，太阳才会显示出来）
+            ctx.closePath();//关闭路径
+
+            //地球
+            ctx.beginPath();
+            //设置画笔填充颜色
+            ctx.fillStyle = 'blue';
+            //将画笔阴影去掉
+            ctx.shadowBlur = 0;
+            //将画布的原点移动到太阳的正中心
+            ctx.translate(400,300);
+            //让画布围绕原点旋转
+            ctx.rotate((a+=0.3)*Math.PI/180);
+            ctx.arc(200,0,20,0,Math.PI*2);
+            ctx.fill();//渲染
+            ctx.closePath();
+            
+            //月亮
+            ctx.beginPath();
+            //设置画笔的填充颜色
+            ctx.fillStyle = 'rgb(214, 213, 203)';
+            //为了能让月球围绕地球旋转，需要将画布原点设置为地球的正中心
+            ctx.translate(200,0);
+            ctx.rotate((b+=1)*Math.PI/180);
+            ctx.arc(40,0,8,0,Math.PI*2);
+            ctx.fill();
+            ctx.closePath();
+
+            //恢复状态信息
+            ctx.restore();
+            //递归调用
+            requestAnimationFrame(loop);
+        }
+        //调用loop函数
+        requestAnimationFrame(loop)
+    </script>
+</body>
+</html>

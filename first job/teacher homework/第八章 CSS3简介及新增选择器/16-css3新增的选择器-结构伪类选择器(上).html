@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择ul 的第一个子元素li */
+        ul li:first-child{
+            color: red;
+        }
+        /* 选择ol 的最后一个子元素li */
+        ol li:last-child{
+            color: purple;
+        }
+
+        /* 选择ul 的第三个子元素li */
+        ul li:nth-child(3){
+            color: green;
+        }
+        /* 选择div下面的偶数个p */
+        /* div p:nth-child(2n){
+            color: darkmagenta;
+        } */
+        div p:nth-child(even){
+            color: darkmagenta;
+        }
+
+        /* 选择div下面的奇数个p */
+        /* div p:nth-child(2n+1){
+            color: darkblue;
+        } */
+        div p:nth-child(odd){
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        | 语法           | 说明                                                         |
+        | -------------- | ------------------------------------------------------------ |
+        | E:first-child  | 选择父元素中的第一个子元素，若该元素为E，则选中，否则选择器不生效 |
+        | E:last-child   | 选择父元素中的最后一个子元素，若该元素为E，则选中，否则选择器不生效 |
+        | E:nth-child(n) | 根据n来选择父元素中的子元素，若选中的子元素为E，则选中，否则选择器不生效 |
+        
+        注意，这类选择器的**选择步骤**如下：
+        - 先给所有子元素**从1开始**进行编号；
+        - 根据选择器来进行选择。如：E:first-child就选择第一个子元素，
+            如果这个子元素是E的话，那么就选中了；但如果第一个子元素不是E的话，
+            那么这类选择器就不会生效。
+
+        总之，这类选择器是“先编号，再选择，选择的元素为E，则选中”。
+    -->
+    <ul>
+        <li>1111111</li>
+        <li>2222222</li>
+        <li>3333333</li>
+        <li>4444444</li>
+        <li>5555555</li>
+        <li>6666666</li>
+    </ul>
+    <ol>
+        <li>1111111</li>
+        <li>2222222</li>
+        <li>3333333</li>
+        <li>4444444</li>
+        <li>5555555</li>
+        <li>6666666</li>
+    </ol>
+    <div>
+        <span>床前明月光</span>
+        <span>疑是地上霜</span>
+        <p>举头望明月1</p>
+        <p>低头思故乡</p>
+        <p>举头望明月2</p>
+        <p>举头望明月3</p>
+        <p>举头望明月4</p>
+        <p>举头望明月5</p>
+        <p>举头望明月6</p>
+        <p>举头望明月7</p>
+    </div>
+</body>
+</html>

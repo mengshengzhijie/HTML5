@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: aqua;
+        }
+
+        a:hover {
+            color: saddlebrown;
+        }
+
+        a:active {
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        超链接伪类一共有四个状态，如果要**同时设置**这四个状态，
+        一定要**按顺序依次设置**，否则不起作用。
+
+            | 选择器   | 作用         |
+            | -------- | ------------ |
+            | :link    | 访问前       |
+            | :visited | 访问后       |
+            | :hover   | 鼠标悬停     |
+            | :active  | 点击时(激活) |
+     -->
+    <a href="#">boss直聘</a>
+</body>
+</html>

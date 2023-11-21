@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a1{
+            width: 300px;
+            height: 300px;
+            background-color: orangered;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="a1"></div>
+    <!-- 
+    CSS中的优先级是用于确定哪个规则将应用到特定元素的机制。它基于不同选择器和声明之间的特定性和重要性。
+        权重优先级
+            继承或 * ：0
+
+            元素选择器：1
+
+            类选择器，伪类选择器：10
+
+            id选择器：100
+
+            行内样式 style=“” ：1000
+
+            !important ：无穷大
+
+        
+        - 权重由4组数字组成，但是**不会有进位**。可以理解为**类选择器永远大于元素选择器，
+          id选择器永远大于类选择器，以此类推**
+        - 权重叠加：如果是复合选择器，**权重会叠加**到一起，再计算
+
+        - 优先级相同，则最后执行的样式生效
+        |        选择器        | 选择器权重 |
+        | :------------------: | :--------: |
+        |      继承或者*       |  0,0,0,0   |
+        |      元素选择器      |  0,0,0,1   |
+        | 类选择器，伪类选择器 |  0,0,1,0   |
+        |       ID选择器       |  0,1,0,0   |
+        |       行内样式       |  1,0,0,0   |
+        |      !important      |   无穷大   |
+     -->
+</body>
+</html>

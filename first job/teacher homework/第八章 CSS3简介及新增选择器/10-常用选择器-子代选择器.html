@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择div下面的亲子级span标签 设置字体大小为25px 字体颜色为purple 字体加粗 */
+        div>span{
+            /* 获取到div下面的亲子级span元素 */
+            color: purple;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子代选择器：使用 **>**，选择所有被父元素包含的**直接子元素**，更深一层的元素不起作用。 -->
+    <div>
+        <span>111111</span>
+        <span>222222</span>
+        <p>
+            <span>333333</span>
+            <span>444444</span>
+        </p>
+        <p>
+            <span>555555</span>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box4{
+            background-color: rebeccapurple;
+        }
+        p{
+            color: orangered;
+        }
+        p{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        折叠性是指当多个CSS属性应用到同一个元素上时，它们如何相互作用以确定最终的样式。
+        当不同的规则决定同一个属性的值时，折叠性规定了哪个规则的值会被应用。
+
+        折叠性的规则如下：
+
+        - 样式冲突，遵循的原则是就近原则，哪个样式离结构近，就执行哪个样式
+
+        - 样式不冲突，不会层叠
+     -->
+     <div class="box4"></div>
+     <p>This is a paragraph.</p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择 div 下的第1个子元素p； */
+        div p:first-of-type{
+            background-color: red;
+        }
+
+        /* 选择div下面的第四个子元素p */
+        div p:nth-of-type(4){
+            background-color: orangered;
+        }
+        /* 选择div下的最有一个子元素p */
+        div p:last-of-type{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        **基础语法**如下表：
+
+        | 语法             | 说明                          |
+        | ---------------- | ----------------------------- |
+        | E:first-of-type  | 选择父元素中的第一个子元素E   |
+        | E:last-of-type   | 选择父元素中的最后一个子元素E |
+        | E:nth-of-type(n) | 根据n来选择父元素中的子元素E  |
+
+        注意，这类选择器的**选择步骤**如下：
+
+            （1）先给所有子元素E**从1开始**进行编号；
+
+            （2）根据选择器来进行选择。如：E:first-of-type就选择第一个子元素E。
+     -->
+     <div>
+        <span>9876543</span>
+        <p>1111111111</p>
+        <p>2222222222</p>
+        <p>3333333333</p>
+        <p>4444444444</p>
+        <p>5555555555</p>
+        <p>6666666666</p>
+     </div>
+</body>
+</html>

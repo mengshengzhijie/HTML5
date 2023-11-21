@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+		/* 在span元素的前面添加内容 */
+		span::before{
+			content: '最前面';
+			color: red;
+		}
+		/* 在span元素的最后面添加内容 */
+		span::after{
+			content: '最后面';
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+    <!-- 
+        伪元素选择器：用于在元素内容的前面和后面插入生成的内容，不需要修改 HTML 结构，
+        为元素添加自定义的样式和装饰效果。
+
+        - 注意：
+            - **必须要有content属性，要来设置伪元素的内容。如果没有则引号留空即可；**
+            - **伪元素默认是行内显示模式；**
+            - **优先级和标签选择器相同。**
+
+        | 选择器    | 说明                            |
+        | --------- | ------------------------------- |
+        | E::before | 在E元素里面最前面添加一个伪元素 |
+        | E::after  | 在E元素里面最后面添加一个伪元素 |
+
+        **::before：** before选择器用于给选定的元素之前插入内容
+
+        **::after：** after选择器一般给选定的元素之后插入内容
+            -->
+        <span>今天是星期二</span>
+</body>
+</html>

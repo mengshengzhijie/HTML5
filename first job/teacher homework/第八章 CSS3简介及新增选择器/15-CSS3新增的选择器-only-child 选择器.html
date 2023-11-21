@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con p:only-child{
+            background-color: blue;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div>
+            <p>小汤</p>
+            <p>小马</p>
+        </div>
+        <div>
+            <p>小余</p>
+        </div>
+        <div>
+            <span>小汤</span>
+            <p>小汤</p>
+            <span>小汤</span>
+        </div>
+        <p><b>小汤</b></p>
+        <div>
+            <p>小马过河</p>
+        </div>
+    </div>
+    <!-- 
+        :only-child 选择器 匹配属于父元素中 唯一子元素的 元素。
+
+        注意：only-child 的冒号的前面的这个元素，一定要有一个父元素 对其进行包裹
+     -->
+</body>
+
+</html>

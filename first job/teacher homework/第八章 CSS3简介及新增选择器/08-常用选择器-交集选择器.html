@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 只有同时具有"box"和"content"两个class的按钮元素才会被选中，并应用红色字体颜色。
+ */
+        .box.content{
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 不使用任何分隔符，选择同时满足多个条件的元素，只有同时匹配两个选择器的元素才会被选中。 -->
+    <span class="box content">hello java</span>
+    <br>
+    <span class="box">hello HTML5</span>
+    <br>
+    <span class="content">hello css3</span>
+</body>
+</html>

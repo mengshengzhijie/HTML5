@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 1. 选择有目标属性的标签 */
+			/* 选择有class属性的ul标签 */
+			ul[class]{
+				background-color: deepskyblue;
+			}
+			/*  2.选择有目标属性且属性值为"value"的标签 */
+			/* 选择有id属性，且值为ul4的ul标签 */
+			ul[id='ul4']{
+				background-color: purple;
+			}
+			/* 3.选择有目标属性且属性值以"x"开头的标签  */
+			/* 选择class值开头为item的div元素 */
+			div[class^='item']{
+				width: 200px;
+				height: 200px;
+				border: 1px solid green;
+			}
+			/* 4.选择有目标属性且属性值以"x"结尾的标签 */
+			/* 选择class值结尾为2的div元素 */
+			div[class$='2']{
+				background-color: pink;
+			}
+			/* 4.选择有目标属性且属性值包含"x"的标签 */
+			/* 选择class的值中还有b的div元素 */
+			div[class*='b']{
+				width: 300px;
+				height: 300px;
+				background-color: orangered;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 属性选择器是根据元素属性来选择元素，使用`[]`来包裹
+		 
+		 | 语法                  | 说明                                  |
+		 | :-------------------- | ------------------------------------- |
+		 | 标签[属性] {}         | 选择有目标属性的标签                  |
+		 | 标签[属性="value"] {} | 选择有目标属性且属性值为"value"的标签 |
+		 | 标签[属性^="x"] {}    | 选择有目标属性且属性值以"x"开头的标签 |
+		 | 标签[属性$="x"] {}    | 选择有目标属性且属性值以"x"结尾的标签 |
+		 | 标签[属性*="x"] {}    | 选择有目标属性且属性值包含"x"的标签   |
+		 -->
+		 <!--  -->
+		 <ul name = "u1">
+		 	<li>1111</li>
+		 	<li>2222</li>
+		 	<li>3333</li>
+		 	<li>4444</li>
+		 </ul>
+		 <ul name = "u2" id="ul2">
+		 	<li>1111</li>
+		 	<li>2222</li>
+		 	<li>3333</li>
+		 	<li>4444</li>
+		 </ul>
+		 <ul name = "u3" class="ul3">
+		 	<li>1111</li>
+		 	<li>2222</li>
+		 	<li>3333</li>
+		 	<li>4444</li>
+		 </ul>
+		 <ul name = "u4" id="ul4">
+		 	<li>1111</li>
+		 	<li>2222</li>
+		 	<li>3333</li>
+		 	<li>4444</li>
+		 </ul>
+		 <div class="item1">1</div>
+		 <div class="item2">2</div>
+		 <div class="item3">3</div>
+		 <div class="abc"></div>
+	</body>
+</html>

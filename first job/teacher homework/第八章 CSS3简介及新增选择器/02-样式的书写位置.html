@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1.内部样式
+            写在head标签的里面 通过style标签来书写  
+            小项目（大部分情况下教学使用）
+     -->
+     <style>
+        /* 内部样式 */
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+     </style>
+     <!-- 
+        2.外部样式
+            在外面新建一个css文件 通过link标签引入外部的css文件（实际开发常用）
+     -->
+     <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <!-- 3.内联样式  不推荐使用 -->
+    <div style="width: 200px; height: 200px; background-color:purple";></div>
+</body>
+</html>

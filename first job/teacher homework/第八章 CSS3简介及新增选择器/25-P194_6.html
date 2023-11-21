@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#img1{
+				display: block;
+				margin: 0 auto;
+				width: 60%;
+				height: 400px;
+			}
+			.box1{
+				position: absolute;
+				top: 250px;
+				left: 25%;
+				width: 100px;
+				height: 100px;
+				background-color: orangered;
+				text-align: center;
+				line-height: 100px;
+				border-radius: 10px;
+				font-size: 20px;
+				
+			}
+			#m1{
+				position: absolute;
+				left: 5%;
+				top: -47px;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+			}
+			.box2{
+				position: absolute;
+				top: 250px;
+				left: 35%;
+				width: 100px;
+				height: 100px;
+				background-color: orangered;
+				text-align: center;
+				line-height: 100px;
+				border-radius: 10px;
+				font-size: 20px;
+				
+			}
+			#m2{
+				position: absolute;
+				left: 5%;
+				top: -47px;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+			}
+			.box3{
+				position: absolute;
+				top: 250px;
+				left: 45%;
+				width: 100px;
+				height: 100px;
+				background-color: orangered;
+				text-align: center;
+				line-height: 100px;
+				border-radius: 10px;
+				font-size: 20px;
+				
+			}
+			#m3{
+				position: absolute;
+				left: 5%;
+				top: -47px;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+			}
+			.box4{
+				position: absolute;
+				top: 250px;
+				left: 55%;
+				width: 100px;
+				height: 100px;
+				background-color: orangered;
+				text-align: center;
+				line-height: 100px;
+				border-radius: 10px;
+				font-size: 20px;
+				
+			}
+			#m4{
+				position: absolute;
+				left: 5%;
+				top: -47px;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+			}
+			.box5{
+				position: absolute;
+				top: 250px;
+				left: 65%;
+				width: 100px;
+				height: 100px;
+				background-color: orangered;
+				text-align: center;
+				line-height: 100px;
+				border-radius: 10px;
+				font-size: 20px;
+				
+			}
+			#m5{
+				position: absolute;
+				left: 5%;
+				top: -47px;
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+			}
+			/* 鼠标经过box1-box5变成小手和改变背景颜色 */
+			.box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover{
+				cursor: pointer;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/1.jpg" alt="" id="img1">
+		<div class="box1">
+			第一张
+			<img src="img/1.jpg" alt="" id="m1">
+		</div>
+		<div class="box2">
+			第一张
+			<img src="img/2.jpg" alt="" id="m2">
+		</div>
+		<div class="box3">
+			第一张
+			<img src="img/3.jpg" alt="" id="m3">
+		</div>
+		<div class="box4">
+			第一张
+			<img src="img/4.jpg" alt="" id="m4">
+		</div>
+		<div class="box5">
+			第一张
+			<img src="img/5.jpg" alt="" id="m5">
+		</div>
+		<script>
+			//1.获取页面元素
+			var img = document.getElementById('img1');
+			var box1 = document.querySelector('.box1');
+			var box2 = document.querySelector('.box2');
+			var box3 = document.querySelector('.box3');
+			var box4 = document.querySelector('.box4');
+			var box5 = document.querySelector('.box5');
+
+			//点击第二个，切换背景图片
+			box2.onclick=function(){
+				img.src='img/2.jpg';
+				this.style.backgroundColor='red';
+			}
+		</script>
+	</body>
+</html>

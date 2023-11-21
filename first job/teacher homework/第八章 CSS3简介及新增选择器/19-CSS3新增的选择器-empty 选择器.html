@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .con p:empty{
+            background-color: blue;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        :empty选择器 选择每个**没有任何子级**的元素（包括文本节点）。
+
+        没有任何子级 指的是  有空标签都不行！！！
+     -->
+     <div class="con">
+        <p>段落</p>
+        <p></p>
+        <p>段落</p>
+        <p></p>
+        <p>段落</p>
+        <p><span></span></p>
+        <p>段落</p>
+</div>
+</body>
+</html>

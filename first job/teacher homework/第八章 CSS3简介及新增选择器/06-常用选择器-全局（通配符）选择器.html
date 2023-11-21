@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 代表选中页面中的所有元素，但是优先级比较低 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        #a4{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        全局选择器：又叫通配符选择器，可以与任何元素匹配，一般只做初始化用，影响范围最大所以优先级越低
+     -->
+    <div id="a4"></div>
+    <!-- 
+        各选择器之间存在优先级关系，一般来说，标签的影响范围越大，优先级越低。
+
+- 优先级：**行内选择器>id选择器>类选择器>标签选择器>全局选择器**
+
+     -->
+</body>
+</html>

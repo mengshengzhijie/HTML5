@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+			}
+			.item{
+				width: 200px;
+				height: 200px;
+				background-color: orangered;
+				border: 1px solid green;
+				flex-grow: 1;
+			}
+			.inner2{
+				flex-grow: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 当所有子元素宽度之和小于父元素的宽度时，子元素如何分配父元素的剩余空间。 -->
+		 <div class="box">
+			 <div class="item">1</div>
+			 <div class="item inner2">2</div>
+			 <div class="item">3</div>
+		 </div>
+		 
+		 <!-- 
+		  默认值为 0，即不放大。当容器空间有剩余时，
+		  会按照各个项目设置的 `flex-grow` 值来分配剩余空间。
+		  如果一个项目的 `flex-grow` 设为 2，另一个项目设为 1，
+		  则前者占据的剩余空间是后者的两倍。
+		  -->
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 当设备类型时屏幕并且视口宽度小于等于400px的时候，应用的样式 */
+			@media screen and (max-width:400px){
+				body{
+					background-color: red;
+				}
+			}
+			/* 当设备是屏幕 并且视口宽度为400（不包含）到600之间时显示的样式 */
+			@media screen and (min-width:401px) and (max-width:600px){
+				body{
+					background-color: orange;
+				}
+			}
+			/* 当设备时屏幕  页面视口宽度大于600时，显示的样式 */
+			@media screen and (min-width:601px){
+				body{
+					background-color: rgb(255,255,0);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 页面宽度 <= 400时，背景是红色；
+			400 < 页面宽度 <= 600 时，背景是橙色；
+			页面宽度 > 600时，背景是黄色； -->
+	</body>
+</html>

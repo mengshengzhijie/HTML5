@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+			}
+			.item{
+				width: 200px;
+				height: 200px;
+				background-color: orangered;
+				border: 1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		 <div class="box">
+			 <div class="item">1</div>
+			 <div class="item">2</div>
+			 <div class="item">3</div>
+			 <div class="item">4</div>
+			 <div class="item">5</div>
+		 </div>
+		 <!-- 
+			注：在这个例子中，弹性盒子（父元素）的宽度为800px，
+			而所有子元素宽度之和为1000px，此时子元素宽度之和大于父元素宽度。
+			因此，子元素会按比例来划分宽度。这就是弹性盒子的特点。
+		  -->
+	</body>
+</html>

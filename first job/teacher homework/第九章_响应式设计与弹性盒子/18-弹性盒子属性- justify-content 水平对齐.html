@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+				/* flex-direction  row  默认值  主轴方向从左到右 */
+				flex-direction: row;
+				
+				/* 使用flex-wrap属性来 定义弹性盒子内部“子元素”的换行   nowrap 不换行 默认值*/
+				flex-wrap: nowrap;
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 flex-start 主轴起始点对齐  默认值*/
+				justify-content: flex-start;
+				
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 flex-end主轴起终点对齐 */
+				/* justify-content: flex-end; */
+				
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 center主轴起中间对其对齐 */
+				/* justify-content: center; */
+				
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 space-between  
+					所有子元素平均分布  两边没有间隙
+				*/
+				/* justify-content: space-between; */
+				
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 space-around
+					所有子元素平局分布，两边留有间距
+				*/
+				/* justify-content: space-around; */
+				
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 space-around
+					所有子元素平均分布,包括元素与边缘的间隙
+				*/
+				/* justify-content: space-evenly; */
+				
+			}
+			.item{
+				width: 200px;
+				height: 200px;
+				background-color: orangered;
+				border: 1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 在CSS3中，我们可以使用order属性来定义弹性盒子内部“子元素”的排列顺序。 -->
+		 <div class="box">
+			 <div class="item">1</div>
+			 <div class="item">2</div>
+			 <div class="item">3</div>
+		 </div>
+	</body>
+</html>

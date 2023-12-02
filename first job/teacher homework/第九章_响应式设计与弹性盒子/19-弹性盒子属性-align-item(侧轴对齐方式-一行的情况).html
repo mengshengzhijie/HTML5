@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+				/* flex-direction  row  默认值  主轴方向从左到右 */
+				flex-direction: row;
+				
+				/* 使用flex-wrap属性来 定义弹性盒子内部“子元素”的换行   nowrap 不换行 默认值*/
+				flex-wrap: nowrap;
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 
+					flex-start 主轴起始点对齐  默认值*/
+				justify-content: flex-start;
+				/* align-items属性来定义弹性盒子内部子元素在“纵轴(侧轴)”上的对齐方式   
+				   flex-start 默认值，侧轴的起点对其
+				*/
+			   /* align-items: flex-start; */
+			   
+			   /* align-items属性来定义弹性盒子内部子元素在“纵轴(侧轴)”上的对齐方式
+			   				   flex-end ，侧轴的终点对齐
+			   				*/
+			   /* align-items: flex-end; */
+			   
+			   /* align-items属性来定义弹性盒子内部子元素在“纵轴(侧轴)”上的对齐方式
+			   				   center ，侧轴的中间对齐
+			   				*/
+			   /* align-items: center; */
+			   
+			   /* align-items属性来定义弹性盒子内部子元素在“纵轴(侧轴)”上的对齐方式
+			   				   baseline ，伸缩项目的第一行文字的基线对其
+			   				*/
+			   /* align-items: baseline; */
+			   
+			   /* align-items属性来定义弹性盒子内部子元素在“纵轴(侧轴)”上的对齐方式
+			   				   stretch(默认值) ，如果伸缩项目未设置高度是,将占满整个容器的高度
+			   				*/
+			   align-items: stretch;
+				
+			}
+			.item{
+				width: 200px;
+				/* height: 200px; */
+				background-color: orangered;
+				border: 1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		 <div class="box">
+			 <div class="item">1</div>
+			 <div class="item">2</div>
+			 <div class="item">3</div>
+		 </div>
+	</body>
+</html>

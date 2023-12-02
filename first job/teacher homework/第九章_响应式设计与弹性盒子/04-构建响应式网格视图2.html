@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			.col-1 {
+				width: 8.33%;
+			}
+
+			.col-2 {
+				width: 16.66%;
+			}
+
+			.col-3 {
+				width: 25%;
+			}
+
+			.col-4 {
+				width: 33.33%;
+			}
+
+			.col-5 {
+				width: 41.66%;
+			}
+
+			.col-6 {
+				width: 50%;
+			}
+
+			.col-7 {
+				width: 58.33%;
+			}
+
+			.col-8 {
+				width: 66.66%;
+			}
+
+			.col-9 {
+				width: 75%;
+			}
+
+			.col-10 {
+				width: 83.33%;
+			}
+
+			.col-11 {
+				width: 91.66%;
+			}
+
+			.col-12 {
+				width: 100%;
+			}
+			/* 所有这些列应向左浮动，并带有 15px 的内边距： */
+			[class*='col-']{
+				float: left;
+				padding: 15px;
+				border: 1px solid red;
+			}
+			.row1>div{
+				height: 100px;
+			}
+			.row2>div{
+				height: 200px;
+			}
+			.row3>div{
+				height: 100px;
+			}
+			/* 行内的所有列全部都向左浮动，因此会从页面流中移出，
+			并将放置其他元素，就好像这些列不存在一样。为了防止这种情况，
+			我们会添加清除流的样式： */
+			.row1::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row1">
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+		</div>
+		<div class="row2">
+			<div class="col-3"></div>
+			<div class="col-6"></div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row3">
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+			<div class="col-1"></div>
+		</div>
+	</body>
+</html>

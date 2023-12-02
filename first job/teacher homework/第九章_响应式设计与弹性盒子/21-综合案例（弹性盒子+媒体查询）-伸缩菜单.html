@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*定义整体样式*/
+			.nav {
+				/*去除默认样式*/
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				/*定义弹性盒子*/
+				display: flex;
+				background-color: hotpink;
+			}
+
+			.nav a {
+				/*去除默认样式*/
+				text-decoration: none;
+				display: block;
+				padding: 16px;
+				color: white;
+				text-align: center;
+			}
+
+			.nav a:hover {
+				background-color: lightskyblue;
+			}
+
+			/*设备大于800px时*/
+			@media (min-width:800px) {
+
+				/*所有子元素在右边*/
+				.nav {
+					justify-content: flex-end;
+				}
+
+				li {
+					border-left: 1px solid silver;
+				}
+			}
+
+			/*设备大于600px且小于800px时*/
+			@media (min-width:600px) and (max-width:800px) {
+
+				/*所有子元素平分*/
+				.nav li {
+					flex: 1;
+				}
+
+				li+li {
+					border-left: 1px solid silver;
+				}
+			}
+
+			/*设备小于600px时*/
+			@media (max-width: 600px) {
+				/*所有子元素纵向排列*/
+				.nav {
+					flex-flow: column wrap;
+				}
+
+				li+li {
+					border-top: 1px solid silver;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">前端</a></li>
+			<li><a href="#">后端</a></li>
+			<li><a href="#">下载</a></li>
+		</ul>
+	</body>
+</html>

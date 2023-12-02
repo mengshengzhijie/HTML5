@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+				/* flex-direction  row  默认值  主轴方向从左到右 */
+				flex-direction: row;
+				
+				/* 使用flex-wrap属性来 定义弹性盒子内部“子元素”的换行   nowrap 不换行 默认值*/
+				/* flex-wrap: nowrap; */
+				flex-wrap: wrap;
+				/* justify-content 定义弹性盒子内部子元素在“横轴(主轴)”上的对齐方式。 
+					flex-start 主轴起始点对齐  默认值*/
+				justify-content: flex-start;
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式  flex-start 与侧轴的起点对齐 */
+				/* align-content: flex-start; */
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式  flex-end 与侧轴的终点对齐 */
+				/* align-content: flex-end; */
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式 center与侧轴的中间对齐 */
+				/* align-content: center; */
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式 space-between 与侧轴的两端对齐  中间平均分布 */
+				/* align-content: space-between; */
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式 space-around 伸缩项目距离相等 比边缘距离大一倍 */
+				/* align-content: space-around; */
+				
+				/* align-content属性 用于定义伸缩项目在侧轴上排列方式 stretch (默认值) 占满整个侧轴 */
+				align-content: stretch;
+				/* 前提是:伸缩项目没有设置高度 */
+				
+			}
+			.item{
+				width: 200px;
+				/* height: 200px; */
+				background-color: orangered;
+				border: 1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		 <div class="box">
+			 <div class="item">1</div>
+			 <div class="item">2</div>
+			 <div class="item">3</div>
+			 <div class="item">4</div>
+			 <div class="item">5</div>
+			 <div class="item">6</div>
+			 <div class="item">7</div>
+			 
+		 </div>
+	</body>
+</html>

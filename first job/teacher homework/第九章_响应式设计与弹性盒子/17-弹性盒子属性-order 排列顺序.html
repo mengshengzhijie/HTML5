@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			.box{
+				/* 开启flex布局  它就成为了伸缩容器*/
+				display: flex;
+				width: 800px;
+				height: 600px;
+				background-color: gray;
+				/* flex-direction  row  默认值  主轴方向从左到右 */
+				flex-direction: row;
+				
+				/* 使用flex-wrap属性来 定义弹性盒子内部“子元素”的换行   nowrap 不换行 默认值*/
+				flex-wrap: nowrap;
+				
+				
+				
+			}
+			.item{
+				width: 200px;
+				height: 200px;
+				background-color: orangered;
+				border: 1px solid green;
+			}
+			.inner1{
+				order: 3;
+			}
+			.inner2{
+				order: 1;
+			}
+			.inner3{
+				order: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 在CSS3中，我们可以使用order属性来定义弹性盒子内部“子元素”的排列顺序。 -->
+		 <div class="box">
+			 <div class="item inner1">1</div>
+			 <div class="item inner2">2</div>
+			 <div class="item inner3">3</div>
+		 </div>
+	</body>
+</html>

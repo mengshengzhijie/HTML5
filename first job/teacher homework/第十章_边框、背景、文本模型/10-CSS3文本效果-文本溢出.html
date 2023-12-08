@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#b1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/* text-overflow属性设置文本内容溢出时呈现的样式。 */
+				/* 要使text-overflow属性生效，块容器必须显示定义overflow为非visible值，
+				white-space为nowrap */
+				overflow: hidden;
+				white-space: nowrap;
+				/* text-overflow: clip; */
+				text-overflow: ellipsis;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="b1">
+			床前明月光床前明月光床前明月光床前明月光床前明月光
+		</div>
+	</body>
+</html>

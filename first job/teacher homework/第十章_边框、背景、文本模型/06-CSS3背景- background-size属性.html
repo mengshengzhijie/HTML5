@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box6{
+				width: 400px;
+				height: 400px;
+				background-image: url(./img/3.jpg);
+				border: 5px solid green;
+				margin: 0 auto;
+				background-repeat: no-repeat;
+				/* background-size属性  设置背景图片的尺寸 */
+				
+				/* 1.用长度指定背景图片大小，不允许负值 */
+				/* background-size: 400px 400px; */
+				
+				/* 2.用百分比指定背景图片大小，不允许负值 */
+				/* background-size: 100% 100%; */
+				
+				/* 3.contain：将图片等比缩放，是图片的宽或高，与容器的宽或高相等，
+					再将完整背景图片包含在容器内，但是注意：
+					可能会造成容器里部分区域没有背景图片。 */
+				/* background-size: contain; */
+				
+				/* 4.cover：将背景图片等比缩放，直到完全覆盖容器，
+				 图片会尽可能的显示在元素上，但是注意：背景图片可能会显示不完整。 */
+				 background-clip: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box6"></div>
+	</body>
+</html>

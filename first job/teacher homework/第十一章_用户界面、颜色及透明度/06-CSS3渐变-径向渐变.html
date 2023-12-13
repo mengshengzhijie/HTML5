@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin-left: 50px;
+			}
+			.b1{
+				/*circle 表示正圆   ellipse表示椭圆  */
+				background-image: radial-gradient(circle,red,purple,yellow);
+				/* background-image: radial-gradient(ellipse,red,purple,yellow); */
+			}
+			.b2{
+				/* background-image: radial-gradient(circle at top,red,purple,yellow); */
+				/* background-image: radial-gradient(circle at bottom,red,purple,yellow); */
+				/* background-image: radial-gradient(circle at left,red,purple,yellow); */
+				/* background-image: radial-gradient(circle at right,red,purple,yellow); */
+				background-image: radial-gradient(circle at top left,red,purple,yellow);
+			 } 
+			
+			.b3{
+				background-image: repeating-radial-gradient(red 20%,yellow 30%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box b1">1</div>
+		<div class="box b2">2</div>
+		<div class="box b3">3</div>
+		<div class="box b4">4</div>
+		<div class="box b5">5</div>
+	</body>
+</html>

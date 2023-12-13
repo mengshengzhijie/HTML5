@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin-left: 50px;
+			}
+			.b1{
+				background-image: linear-gradient(red,green,yellow);
+			}
+				
+			.b2{
+				/* background-image: linear-gradient(to top,red,green,yellow); */
+				/* background-image: linear-gradient(to right,red,green,yellow); */
+				/* background-image: linear-gradient(to left,red,green,yellow); */
+				background-image: linear-gradient(to top right,red,green,yellow);
+			}
+			.b3{
+				background-image: linear-gradient(30deg,red,yellow,blue);
+			}
+			.b4{
+				background-image: linear-gradient(to right,red,purple,green,blue,pink);
+			}
+			.b5{
+				background-image: linear-gradient(red 50px, green 100px,blue 150px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box b1">1</div>
+		<div class="box b2">2</div>
+		<div class="box b3">3</div>
+		<div class="box b4">4</div>
+		<div class="box b5">5</div>
+	</body>
+</html>

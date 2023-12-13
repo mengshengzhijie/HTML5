@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.box1{
+				width: 400px;
+				height: 400px;
+				background-color: green;
+				border: 1px solid red;
+				/* 
+				 注：输入类的元素设置resize时直接设置，
+				    而其它元素设置该属性时需结合overflow:hidden使用
+				 */
+				overflow: hidden;
+				resize: both;
+				/* resize: horizontal; */
+				/* resize: vertical; */
+			}
+		</style>
+	</head>
+	<body>
+		<!-- resize属性指定一个元素是否可以由用户调整大小的。 -->
+		<div class="box1"></div>
+	</body>
+</html>

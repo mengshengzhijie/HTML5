@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>我的个人网站</title>
+</head>
+<body>
+    <h1>欢迎来到我的个人网站</h1>
+    <p>这里是我的自我介绍，你可以在这里写一些关于你的信息，比如你的名字，年龄，爱好，职业等等。</p>
+    <form>
+        <p>如果你想联系我，你可以填写下面的表单，然后点击提交按钮。</p>
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" placeholder="请输入你的姓名"><br>
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name="email" placeholder="请输入你的邮箱"><br>
+        <label for="message">留言：</label>
+        <textarea id="message" name="message" placeholder="请输入你想对我说的话"></textarea><br>
+        <input type="submit" value="提交">
+    </form>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid black;">
+        <script>
+            //你可以在这里写一些canvas的代码，比如绘制一些图形，动画等等。
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 200, 200);
+        </script>
+    </canvas>
+    <p>这里是我的图片展示，你可以在这里放一些你喜欢的图片，比如1.jpg，2.jpg等等。</p>
+    <img src="1.jpg" alt="图片1" width="300" height="200">
+    <img src="2.jpg" alt="图片2" width="300" height="200">
+</body>
+</html>
